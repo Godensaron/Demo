@@ -3,92 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Production Order and Report</title>
+    <title>OEE Monitoring Dashboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Production Order and Report</h1>
-
-        <section>
-            <h2>Production Order</h2>
-            <p><strong>Order ID:</strong> 1001</p>
-            <p><strong>Total Quantity:</strong> 1,000 Boxes</p>
-            <p><strong>Production Date:</strong> [Insert Date]</p>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Machine Name</th>
-                        <th>Start Time</th>
-                        <th>End Time</th>
-                        <th>Setup Time</th>
-                        <th>Parameter Settings</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Rice Cooker</td>
-                        <td>08:00 AM</td>
-                        <td>10:00 AM</td>
-                        <td>1 hour</td>
-                        <td>Temperature: 85°C</td>
-                    </tr>
-                    <tr>
-                        <td>Meat Fryer</td>
-                        <td>10:15 AM</td>
-                        <td>11:15 AM</td>
-                        <td>30 minutes</td>
-                        <td>Temperature: 160°C</td>
-                    </tr>
-                    <tr>
-                        <td>Spice Mixer</td>
-                        <td>11:30 AM</td>
-                        <td>12:00 PM</td>
-                        <td>15 minutes</td>
-                        <td>Mixing Ratio: 1:2</td>
-                    </tr>
-                    <tr>
-                        <td>Packaging Machine</td>
-                        <td>12:15 PM</td>
-                        <td>01:15 PM</td>
-                        <td>45 minutes</td>
-                        <td>Pack Size: 200g</td>
-                    </tr>
-                    <tr>
-                        <td>Box Sealer</td>
-                        <td>01:30 PM</td>
-                        <td>02:00 PM</td>
-                        <td>20 minutes</td>
-                        <td>Sealing Pressure: 2kg</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section>
-            <h2>Quality Assurance (QA)</h2>
-            <p><strong>QA Checks Conducted:</strong> Yes</p>
-            <p><strong>Results:</strong> Pass</p>
-            <p><strong>Comments:</strong> All products met cleanliness and weight compliance.</p>
-        </section>
-
-        <section>
-            <h2>Quality Control (QC)</h2>
-            <p><strong>Final Inspection Conducted:</strong> Yes</p>
-            <p><strong>Results:</strong> Approved for Storage</p>
-            <p><strong>Comments:</strong> No defects found.</p>
-        </section>
-
-        <section>
-            <h2>Production Report</h2>
-            <p><strong>Total Produced:</strong> 1,000 Boxes</p>
-            <p><strong>Good Products:</strong> 1,000 Boxes</p>
-            <p><strong>Defective Products:</strong> 0 Boxes</p>
-            <p><strong>Date of Report:</strong> [Insert Date]</p>
-        </section>
+        <h1>OEE Monitoring Dashboard</h1>
+        <div class="machine-info">
+            <img src="robot-arm.png" alt="Robot Arm" class="machine-image">
+            <h2>Roll Handling</h2>
+            <p><strong>Machine Status:</strong> <span id="status">Running</span></p>
+            <p><strong>Machine Running Time:</strong> 24 hr</p>
+            <p><strong>Start Date:</strong> 01/01/2021</p>
+            <p><strong>Last Breakdown:</strong> 01/03/2021</p>
+        </div>
+        <div class="oee-metrics">
+            <h3>OEE (Overall Equipment Effectiveness)</h3>
+            <div class="oee-value">
+                <div id="oee-percentage">54%</div>
+            </div>
+            <div class="metric">
+                <strong>Availability (A):</strong> <span id="availability">80%</span>
+            </div>
+            <div class="metric">
+                <strong>Performance (P):</strong> <span id="performance">75%</span>
+            </div>
+            <div class="metric">
+                <strong>Quality (Q):</strong> <span id="quality">90%</span>
+            </div>
+        </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
