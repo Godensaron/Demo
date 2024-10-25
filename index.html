@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OEE Monitoring Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>OEE Monitoring Dashboard</h1>
+        <div class="machine-info">
+            <img src="robot-arm.png" alt="Robot Arm" class="machine-image">
+            <h2>Roll Handling</h2>
+            <p><strong>Machine Status:</strong> <span id="status">Running</span></p>
+            <p><strong>Machine Running Time:</strong> 24 hr</p>
+            <p><strong>Start Date:</strong> 01/01/2021</p>
+            <p><strong>Last Breakdown:</strong> 01/03/2021</p>
+        </div>
+        <div class="oee-metrics">
+            <h3>OEE (Overall Equipment Effectiveness)</h3>
+            <div class="oee-value">
+                <div id="oee-percentage">54%</div>
+            </div>
+            <div class="metric">
+                <strong>Availability (A):</strong> <span id="availability">80%</span>
+            </div>
+            <div class="metric">
+                <strong>Performance (P):</strong> <span id="performance">75%</span>
+            </div>
+            <div class="metric">
+                <strong>Quality (Q):</strong> <span id="quality">90%</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
